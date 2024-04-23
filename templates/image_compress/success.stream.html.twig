@@ -1,0 +1,14 @@
+<turbo-stream action="replace" target="compressed_image">
+    <template>
+        <div class="card">
+            <div class="card-header">
+                Compressed Image
+            </div>
+            <div class="card-body">
+                Your image has been compressed. <br />
+                You saved {{ image.getSize() - image.getCompressedSize() }} bytes. <br />
+                <a href="/uploads/images/{{ image.getFullCompressedFileName() }}" download class="btn btn-primary mt-2">Download Compressed Image</a>
+            </div>
+        </div>
+    </template>
+</turbo-stream>

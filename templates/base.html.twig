@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html data-bs-theme="dark">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}
+        {% endblock %}
+
+        {% block javascripts %}
+            {% block importmap %}{{ importmap('app') }}{% endblock %}
+        {% endblock %}
+    </head>
+    <body>
+        {% include 'base/navbar.html.twig' %}
+        <div class="container-fluid">
+            {% block body %}{% endblock %}
+        </div>
+        {% include 'base/footer.html.twig' %}
+    </body>
+</html>

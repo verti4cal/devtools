@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Your compressed image{% endblock %}
+
+{% block body %}
+<div class="container">
+    <div class="row mt-3">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    Compressed Image
+                </div>
+                <div class="card-body">
+                    Your image has been compressed. <br />
+                    You saved {{ image.getSize() - image.getCompressedSize() }} bytes. <br />
+                    <a href="/uploads/images/{{ image.getFullCompressedFileName() }}" download>Download Compressed Image</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,16 @@
+<turbo-stream action="replace" target="favicons">
+    <template>
+        <div class="card">
+            <div class="card-header">
+                Generated Favicons
+            </div>
+            <div class="card-body">
+                Your favicons had been generated. <br />
+                <a href="/uploads/images/{{ image.getSafeFileName() }}-favicons.zip" download class="btn btn-primary mt-2">Download Zip file</a> <br/>
+                {% for favicon in image.favicons %}
+                    <a href="/uploads/images/{{ favicon.getFullFileName() }}" download class="btn btn-primary mt-2">Download {{ favicon.size }}</a> <br/>
+                {% endfor %}
+            </div>
+        </div>
+    </template>
+</turbo-stream>

@@ -1,0 +1,34 @@
+<nav class="navbar navbar-expand-lg bg-secondary-subtle">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">DEV Tools</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link {{ path('home') | is_active_uri }}" href="/">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle {{ path('image') | is_active_uri }}" href="{{ path('image') }}" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Image
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item {{ path('image_compress') | is_active_uri }}" href="{{ path('image_compress') }}">Compress</a></li>
+            <li><a class="dropdown-item {{ path('image_crop') | is_active_uri }}" href="{{ path('image_crop') }}">Crop</a></li>
+            <li><a class="dropdown-item {{ path('image_favicon') | is_active_uri }}" href="{{ path('image_favicon') }}">Favicon generator</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle {{ path('pdf') | is_active_uri }}" href="{{ path('pdf') }}" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            PDF
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item {{ path('pdf_merge') | is_active_uri }}" href="{{ path('pdf_merge') }}">Split / Merge</a></li>
+            <li><a class="dropdown-item {{ path('pdf_protect') | is_active_uri }}" href="{{ path('pdf_protect') }}">Protect</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
